@@ -29,7 +29,7 @@ import {
   Workflow,
 } from "lucide-react";
 
-export const SITE_URL = "https://ahammadali.dev";
+export const SITE_URL = "https://ahammad-portfolio-app.vercel.app";
 
 export const PERSONAL = {
   name: "Ahammadali Shaik",
