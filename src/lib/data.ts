@@ -50,7 +50,7 @@ export const PERSONAL = {
   github: "https://github.com/ahammadsk-000",
   githubHandle: "ahammadsk-000",
   linkedin: "https://www.linkedin.com/in/ahammadali-shaik",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Ahammadali_Shaik_Resume.pdf",
   tagline: "Building Scalable Backend Systems & Intelligent AI Solutions",
   heroSubtitle:
     "Senior Python Developer with 7.4+ years of total IT experience (6.4 in backend) building enterprise-grade applications, cloud-native systems, and next-generation AI products.",
