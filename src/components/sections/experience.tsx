@@ -60,6 +60,18 @@ export function Experience() {
                       {exp.project ? `${exp.project} · ` : ""}
                       {exp.location}
                     </p>
+                    {exp.stack && (
+                      <div className="mt-3 flex flex-wrap gap-1.5">
+                        {exp.stack.map((t) => (
+                          <span
+                            key={t}
+                            className="rounded-full bg-white/[0.05] px-2.5 py-0.5 text-[11px] text-foreground/80 ring-1 ring-white/10"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <ul className="mt-4 space-y-2.5">
                       {exp.highlights.map((h) => (
                         <li

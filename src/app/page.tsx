@@ -15,8 +15,8 @@ const jsonLd = {
   telephone: PERSONAL.phone,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Guntur",
-    addressRegion: "Andhra Pradesh",
+    addressLocality: "Hyderabad",
+    addressRegion: "Telangana",
     addressCountry: "India",
   },
   sameAs: [PERSONAL.github, PERSONAL.linkedin],
