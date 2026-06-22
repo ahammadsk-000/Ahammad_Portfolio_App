@@ -417,6 +417,8 @@ export type Project = {
   demo: string;
   /** Optional self-hosted preview screenshot in /public/projects. */
   image?: string;
+  /** Fit the whole screenshot inside the 16:9 frame (contain) instead of cropping (cover). */
+  imageContain?: boolean;
   /** Case-study long-form content for the detail page. */
   overview: string;
   challenge: string;
@@ -450,6 +452,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/ahammadsk-000",
     demo: "https://ai-coding-agent-project.vercel.app/",
     image: "/projects/ai-coding-agent.png",
+    imageContain: true,
     overview:
       "An autonomous AI-powered coding assistant that understands an entire codebase, plans changes across files, and executes them through coordinated agents — bringing a Cursor / OpenHands-style experience to local, privacy-first development.",
     challenge:

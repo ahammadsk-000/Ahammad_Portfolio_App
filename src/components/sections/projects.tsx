@@ -22,11 +22,13 @@ function ProjectPreview({
   gradient,
   icon: Icon,
   image,
+  imageContain,
   title,
 }: {
   gradient: string;
   icon: React.ElementType;
   image?: string;
+  imageContain?: boolean;
   title: string;
 }) {
   const [failed, setFailed] = useState(false);
@@ -46,7 +48,10 @@ function ProjectPreview({
             alt={`${title} application preview`}
             fill
             sizes="(max-width: 1024px) 100vw, 1100px"
-            className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+            className={cn(
+              "transition-transform duration-700 group-hover:scale-[1.03]",
+              imageContain ? "object-contain p-3" : "object-cover object-top"
+            )}
             onError={() => setFailed(true)}
           />
           {/* readability + brand wash */}
@@ -108,6 +113,7 @@ export function Projects() {
                   gradient={project.gradient}
                   icon={project.icon}
                   image={project.image}
+                  imageContain={project.imageContain}
                   title={project.title}
                 />
 
