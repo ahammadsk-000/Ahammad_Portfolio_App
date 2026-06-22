@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, ExternalLink, CheckCircle2, ArrowRight } from "lucide-react";
@@ -84,15 +85,35 @@ export function ProjectCaseStudy({ slug }: { slug: string }) {
           project.gradient
         )}
       >
-        <div className="absolute inset-0 bg-grid-pattern bg-[size:32px_32px] opacity-40" />
-        <div className="shimmer-bg absolute inset-0 animate-shimmer" />
-        <motion.div
-          className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-3xl glass-strong"
-          animate={{ y: [0, -12, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <project.icon className="h-12 w-12 text-white" />
-        </motion.div>
+        {project.image ? (
+          <>
+            <Image
+              src={project.image}
+              alt={`${project.title} application preview`}
+              fill
+              sizes="(max-width: 1024px) 100vw, 900px"
+              className={cn(
+                project.imageContain
+                  ? "object-contain p-4"
+                  : "object-cover object-top"
+              )}
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10" />
+          </>
+        ) : (
+          <>
+            <div className="absolute inset-0 bg-grid-pattern bg-[size:32px_32px] opacity-40" />
+            <div className="shimmer-bg absolute inset-0 animate-shimmer" />
+            <motion.div
+              className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-3xl glass-strong"
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <project.icon className="h-12 w-12 text-white" />
+            </motion.div>
+          </>
+        )}
       </motion.div>
 
       {/* Outcomes */}
