@@ -557,6 +557,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/ahammadsk-000",
     demo: "https://ai-interview-prep-project.vercel.app/",
     image: "/projects/ai-interview-prep.png",
+    imageContain: true,
     overview:
       "An AI-driven interview platform featuring resume analysis, realistic mock interviews, natural voice interactions, and automated candidate performance evaluation with detailed reports.",
     challenge:
