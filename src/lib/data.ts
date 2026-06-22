@@ -448,7 +448,8 @@ export const PROJECTS: Project[] = [
     icon: Code2,
     gradient: "from-sky-500/20 via-blue-500/10 to-indigo-500/20",
     github: "https://github.com/ahammadsk-000",
-    demo: "#",
+    demo: "https://ai-coding-agent-project.vercel.app/",
+    image: "/projects/ai-coding-agent.png",
     overview:
       "An autonomous AI-powered coding assistant that understands an entire codebase, plans changes across files, and executes them through coordinated agents — bringing a Cursor / OpenHands-style experience to local, privacy-first development.",
     challenge:
